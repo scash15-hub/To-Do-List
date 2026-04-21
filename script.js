@@ -37,5 +37,14 @@ function displayTasks() {
         //append the list item to the task list
         taskList.appendChild(li);
     })
-
 }
+
+function removeTask(index){
+    tasks.splice(index,1)
+    displayTasks()
+}
+
+document.getElementById('clearTaskBtn').addEventListener('click', function (){
+    tasks =[]
+    displayTasks()
+})

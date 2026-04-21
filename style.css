@@ -1,0 +1,89 @@
+/* Background */
+body {
+    background-color: #FFF5F7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4A4A4A;
+}
+
+/* Title */
+h2 {
+    color: #F48FB1;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Input field */
+#taskInput {
+    border-radius: 12px;
+    border: 1px solid #F8BBD0;
+    padding: 10px;
+}
+
+#taskInput:focus {
+    border-color: #F48FB1;
+    box-shadow: 0 0 0 0.2rem rgba(244, 143, 177, 0.25);
+}
+
+/* Add Task Button */
+#addTaskBtn {
+    background-color: #F8BBD0;
+    border: none;
+    border-radius: 12px;
+    color: #4A4A4A;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+#addTaskBtn:hover {
+    background-color: #F48FB1;
+    color: white;
+}
+
+/* Clear Button */
+#clearTaskBtn {
+    background-color: #F48FB1;
+    border: none;
+    border-radius: 12px;
+    margin-top: 10px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+#clearTaskBtn:hover {
+    background-color: #EC407A;
+}
+
+/* Task list container */
+#taskList {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Individual task items */
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #FCE4EC;
+    background-color: #FFFFFF;
+    padding: 12px 15px;
+    transition: 0.2s;
+}
+
+/* Hover effect */
+.list-group-item:hover {
+    background-color: #FFF0F5;
+}
+
+/* Completed task (you can add this class in JS later) */
+.completed {
+    text-decoration: line-through;
+    color: #A8A8A8;
+    background-color: #F1F8E9 !important;
+}
+
+/* Card feel (optional wrapper look) */
+.col-md-8 {
+    background: #FFFFFF;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
