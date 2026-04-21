@@ -14,6 +14,25 @@ document.getElementById('addTaskBtn').addEventListener('click', function () {
     }
 });
 
+document.getElementById('taskInput').addEventListener('keydown', (e) => {
+
+    if (e.key === 'Enter') {
+
+
+        //get the value from input field
+        let taskInput = document.getElementById('taskInput').value;
+        //check if input is empty
+        if (taskInput) {
+            //add new task to tasks array
+            tasks.push(taskInput);
+            //clear input field value
+            document.getElementById('taskInput').value = '';
+            //update task list display
+            displayTasks();
+        }
+    }
+});
+
 function displayTasks() {
     //select the task list element
     let taskList = document.getElementById('taskList');
@@ -37,14 +56,16 @@ function displayTasks() {
         //append the list item to the task list
         taskList.appendChild(li);
     })
+
+
 }
 
-function removeTask(index){
-    tasks.splice(index,1)
-    displayTasks()
+function removeTask(index) {
+    tasks.splice(index, 1);
+    displayTasks();
 }
 
-document.getElementById('clearTaskBtn').addEventListener('click', function (){
-    tasks =[]
+document.getElementById('clearTaskBtn').addEventListener('click', function () {
+    tasks = []
     displayTasks()
 })
