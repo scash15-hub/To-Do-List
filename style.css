@@ -8,8 +8,11 @@ body {
 /* Title */
 h2 {
     color: #F48FB1;
-    font-weight: 600;
     margin-bottom: 20px;
+    font-family: "brushtones", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 50px;
 }
 
 /* Input field */
@@ -57,6 +60,7 @@ h2 {
 #taskList {
     border-radius: 12px;
     overflow: hidden;
+    
 }
 
 /* Individual task items */
