@@ -69,3 +69,20 @@ document.getElementById('clearTaskBtn').addEventListener('click', function () {
     tasks = []
     displayTasks()
 })
+
+// to get name to show before to-do list 
+function setName() {
+
+    let name = document.getElementById('playerNameInput').value;
+    if (name) {
+        document.getElementById('title').innerText = name + "'s To-Do List";
+    } else {
+        document.getElementById('title').innerText = "To-Do List";
+    }
+}
+
+document.getElementById('playerNameInput').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+        setName();
+    }
+});
