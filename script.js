@@ -38,6 +38,14 @@ function displayTasks() {
     let taskList = document.getElementById('taskList');
     //clear existing HTML list
     taskList.innerHTML = '';
+
+    //ai
+    // ✅ If no tasks → show welcome message
+    if (tasks.length === 0) {
+        taskList.innerHTML = "<li class='list-group-item'>Welcome! Add a task to get started.</li>";
+        return;
+    }
+
     //loop through tasks array and create list items
     tasks.forEach((task, index) => {
         //create <li> element for each task
@@ -71,13 +79,13 @@ document.getElementById('clearTaskBtn').addEventListener('click', function () {
 })
 
 // to get name to show before to-do list 
+//ai(used the english we wrote down)
 function setName() {
-
     let name = document.getElementById('playerNameInput').value;
     if (name) {
         document.getElementById('title').innerText = name + "'s To-Do List";
-    } else {
-        document.getElementById('title').innerText = "To-Do List";
+        document.getElementById('nameScreen').style.display = "none";
+        document.getElementById('todoApp').style.display = "block";
     }
 }
 
@@ -86,3 +94,9 @@ document.getElementById('playerNameInput').addEventListener('keydown', function 
         setName();
     }
 });
+
+//dark mode 
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}

@@ -91,3 +91,104 @@ font-size: 50px;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
+
+/* =========================
+   DARK MODE STYLES
+========================= */
+
+.dark-mode {
+    background-color: #000000;
+    color: #f8bbd0;
+}
+
+/* Card container */
+.dark-mode .col-md-8 {
+    background: #121212;
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.1);
+}
+
+/* Title stays bright pink */
+.dark-mode h2 {
+    color: #ff6fa5;
+}
+
+/* Input field */
+.dark-mode #taskInput {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #ff6fa5;
+}
+
+.dark-mode #taskInput::placeholder {
+    color: #bbbbbb;
+}
+
+/* Task list items */
+.dark-mode .list-group-item {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-bottom: 1px solid #333;
+}
+
+.dark-mode .list-group-item:hover {
+    background-color: #2a2a2a;
+}
+
+/* Buttons pop with pink */
+.dark-mode #addTaskBtn {
+    background-color: #ff6fa5;
+    color: #000;
+}
+
+.dark-mode #addTaskBtn:hover {
+    background-color: #ff4081;
+    color: #fff;
+}
+
+.dark-mode #clearTaskBtn {
+    background-color: #ff4081;
+}
+
+.dark-mode #clearTaskBtn:hover {
+    background-color: #f50057;
+}
+
+/* Completed tasks still visible */
+.dark-mode .completed {
+    color: #888;
+    background-color: #2a2a2a !important;
+}
+
+/* Dark mode toggle button */
+footer {
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    margin-top: 20px;
+}
+
+footer button {
+    background-color: #F48FB1;
+    border: none;
+    border-radius: 25px; /* makes it rounded */
+    padding: 10px 20px;
+    color: #4A4A4A;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+/* hover */
+footer button:hover {
+    background-color: #EC407A;
+    color: white;
+}
+
+/* dark mode version */
+.dark-mode footer button {
+    background-color: #ff6fa5;
+    color: black;
+}
+
+.dark-mode footer button:hover {
+    background-color: #ff4081;
+    color: white;
+}
