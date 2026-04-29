@@ -42,6 +42,21 @@ font-size: 50px;
     color: white;
 }
 
+/* Enter Button */
+#enterBtn {
+    background-color: #F8BBD0;
+    border: none;
+    border-radius: 12px;
+    color: #4A4A4A;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+#enterBtn:hover {
+    background-color: #F48FB1;
+    color: white;
+}
+
 /* Clear Button */
 #clearTaskBtn {
     background-color: #F48FB1;

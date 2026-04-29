@@ -10,14 +10,13 @@ document.getElementById('addTaskBtn').addEventListener('click', function () {
         //clear input field value
         document.getElementById('taskInput').value = '';
         //update task list display
-        displayTasks();
+        displayTasks();        
     }
 });
 
 document.getElementById('taskInput').addEventListener('keydown', (e) => {
 
     if (e.key === 'Enter') {
-
 
         //get the value from input field
         let taskInput = document.getElementById('taskInput').value;
@@ -29,6 +28,8 @@ document.getElementById('taskInput').addEventListener('keydown', (e) => {
             document.getElementById('taskInput').value = '';
             //update task list display
             displayTasks();
+
+            document.getElementById('taskInput').focus();
         }
     }
 });
@@ -43,6 +44,8 @@ function displayTasks() {
     // ✅ If no tasks → show welcome message
     if (tasks.length === 0) {
         taskList.innerHTML = "<li class='list-group-item'>Welcome! Add a task to get started.</li>";
+
+        updateCounter();
         return;
     }
 
@@ -63,9 +66,8 @@ function displayTasks() {
 
         //append the list item to the task list
         taskList.appendChild(li);
-    })
-
-
+    });
+    updateCounter();
 }
 
 function removeTask(index) {
@@ -100,3 +102,11 @@ function myFunction() {
    var element = document.body;
    element.classList.toggle("dark-mode");
 }
+
+// COUNTER
+function updateCounter() {
+  document.getElementById("taskCounter").innerText =
+    "Total Tasks: " + tasks.length;
+}
+
+document.getElementById('enterBtn').addEventListener('click', setName);
